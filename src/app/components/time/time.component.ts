@@ -8,12 +8,13 @@ import {
   Validators,
 } from '@angular/forms';
 import { WeatherService } from '../../services/weather.service';
-import { UpperCasePipe } from '@angular/common';
+import { DecimalPipe, UpperCasePipe } from '@angular/common';
 import { DatePipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-time',
-  imports: [HeaderComponent, ReactiveFormsModule,  UpperCasePipe,DatePipe],
+  imports: [HeaderComponent, ReactiveFormsModule,  UpperCasePipe,DatePipe,DecimalPipe],
   templateUrl: './time.component.html',
   styleUrl: './time.component.css',
 })

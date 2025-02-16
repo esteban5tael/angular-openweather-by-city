@@ -45,7 +45,8 @@
   <div></div>
   <div class="w-1/2 mr-1 p-2 border border-gray-300 rounded-lg">
     <ul class="flex flex-col gap-4 mt-4">
-      <li>Temperature: {{ weather?.main?.temp }}</li>
+      <li>Temperature: {{ (weather?.main?.temp - 273.15) | number:'1.2-2' }} °C</li>
+
       <li>City: {{ weather?.name | uppercase }}</li>
       <li>Latitude: {{ weather?.coord.lat }}</li>
       <li>Longitude: {{ weather?.coord.lon }}</li>
